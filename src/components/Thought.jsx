@@ -7,8 +7,7 @@ export function Thought(props) {
     removeThought(thought.id);
   };
 
-  //the thoughs will be removed after 15 seconds 
-  //automatically
+  //the thoughs will be automatically removed after 15 seconds by useEffect function here
   useEffect(() => {
     const timeRemaining = thought.expiresAt - Date.now();
     const timeout = setTimeout(() => {

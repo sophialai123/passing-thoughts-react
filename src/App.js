@@ -27,7 +27,12 @@ function App() {
 
   const removeThough = thoughtIdToRemove => {
     setThoughts((thoughts) =>
-      thoughts.filter((thought) => thought.id !== thoughtIdToRemove))
+      thoughts.filter((thought) => {
+        // return the new array which does not inclues the thoughtIdToRemove
+        return thought.id !== thoughtIdToRemove
+      }
+      ))
+
   }
 
   return (
